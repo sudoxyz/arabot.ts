@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: MIT OR CC0-1.0
+# Bryn (ARA)
+
+version: "3.8"
+services:
+  bot:
+    build: .
+    hostname: arabot
+    ports:
+      - 443:443
+      - 50000:65535
+    volumes:
+      - .:/arabot/opt/build
