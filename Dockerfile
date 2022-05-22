@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT OR CC0-1.0
 # Bryn (ARA)
 
-FROM node:17.1.0-alpine3.14
+FROM node:18.2.0-alpine3.15
 
 WORKDIR /opt/build/arabot
 
@@ -11,7 +11,7 @@ COPY . .
 
 RUN npm install
 
-RUN npm run build
+RUN npm run cleanBuild
 
 RUN rm -rf src
 
