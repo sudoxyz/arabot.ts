@@ -27,6 +27,7 @@
     "dev": "node ./build/dist/index.js",
     "doc": "typedoc src/index.ts --out docs/typedoc/",
     "lint": "eslint --ext ts src __tests__",
+    "ciLint": "eslint . --ext ts --max-warnings 0",
     "pm2": "pm2 start ecosystem.config.yml",
     "pm2stop": "pm2 stop ecosystem.config.yml",
     "start": "node -r dotenv/config .",
