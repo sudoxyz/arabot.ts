@@ -54,6 +54,7 @@
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-function-name": "^2.0.1",
+    "eslint-plugin-functional": "^4.2.1",
     "eslint-plugin-header": "^3.1.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.0.0",
@@ -81,7 +82,7 @@
     "pm2": "^5.1.2",
     "ts-node": "^10.7.0",
     "typedoc": "^0.22.11",
-    "typescript": "^4.7.0-beta"
+    "typescript": "^4.6.4"
   },
   "engines": {
     "node": "18.2.0"
