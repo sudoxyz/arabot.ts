@@ -18,7 +18,7 @@ const manager = new ShardingManager(BOT_PATH, {
  * @returns never - The process should end after this.
  */
 const kill = (): never =>
-  // eslint-disable-next-line unicorn/no-process-exit, no-process-exit
+  // eslint-disable-next-line unicorn/no-process-exit
   process.exit(process.env.NODE_ENV === 'ci' ? 0 : 1);
 
 manager.on('shardCreate', (shard: DeepReadonly<Shard>) => {

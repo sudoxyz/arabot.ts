@@ -35,7 +35,6 @@ const client = new SapphireClient({
 
 client
   .login(process.env.DISCORD_TOKEN ?? '')
-  // eslint-disable-next-line functional/no-return-void
   .then(() =>
     client.logger.info(
       `Logged In. Running in ${process.env.NODE_ENV ?? 'unknown'}`,
@@ -43,7 +42,6 @@ client
       EVENTS.INIT,
     ),
   )
-  // eslint-disable-next-line functional/no-return-void
   .catch(() =>
     client.logger.fatal('Could Not Log In.', TOPICS.DISCORD, EVENTS.ERROR),
   );
