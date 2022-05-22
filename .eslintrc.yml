@@ -28,9 +28,9 @@ extends:
   - airbnb-base
   - airbnb-typescript/base
   # Functional After AirBNB
-  - plugin:functional/external-recommended
-  - plugin:functional/recommended
-  - plugin:functional/stylistic
+  # - plugin:functional/external-recommended
+  # - plugin:functional/recommended
+  # - plugin:functional/stylistic
   # Prettier Should Remain Last
   - prettier
   - plugin:prettier/recommended
@@ -43,7 +43,7 @@ parserOptions:
 plugins:
   - '@typescript-eslint'
   - import
-  - functional
+  # - functional
   - function-name
   - header
   - jest
@@ -80,28 +80,28 @@ rules:
     - error
     - whitelist: ['message']
       blacklist: []
-  functional/functional-parameters:
-    - off
-  functional/no-class:
-    - off
-  functional/no-expression-statement:
-    - error
-    - ignorePattern:
-        - on
-        - super
-        - client.login
-        - this
-        - logger
-        - console
-        - describe
-        - it
-        - test
-        - expect
-  functional/no-this-expression:
-    - off
-  functional/no-return-void:
-    - error
-    - ignoreImplicit: true
+  # functional/functional-parameters:
+  #   - off
+  # functional/no-class:
+  #   - off
+  # functional/no-expression-statement:
+  #   - error
+  #   - ignorePattern:
+  #       - on
+  #       - super
+  #       - client.login
+  #       - this
+  #       - logger
+  #       - console
+  #       - describe
+  #       - it
+  #       - test
+  #       - expect
+  # functional/no-this-expression:
+  #   - off
+  # functional/no-return-void:
+  #   - error
+  #   - ignoreImplicit: true
   import/no-extraneous-dependencies:
     - error
     - devDependencies:

@@ -7,7 +7,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/Leftclickchris/arabot/"
+    "url": "https://github.com/Animal-Rights-Advocates-Discord/arabot.ts"
   },
   "keywords": [
     "discord",
@@ -54,7 +54,6 @@
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-function-name": "^2.0.1",
-    "eslint-plugin-functional": "^4.2.1",
     "eslint-plugin-header": "^3.1.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.0.0",
