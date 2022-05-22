@@ -14,7 +14,7 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b #v3.0.2
       - name: Setup Node
-        uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048 #v3.2.0
+        uses: actions/setup-node@ea3459bb459f783f186dcfc5229793d2c6f40b25 #v3.2.0
         with:
           node-version: '18.2.0'
           cache: npm
@@ -32,7 +32,7 @@ jobs:
         with:
           submodules: true
       - name: Setup Node
-        uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048 #v3.2.0
+        uses: actions/setup-node@ea3459bb459f783f186dcfc5229793d2c6f40b25 #v3.2.0
         with:
           node-version: '18.2.0'
           cache: npm
