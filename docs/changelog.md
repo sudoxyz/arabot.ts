@@ -31,4 +31,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - N/A
 
-[unreleased]: https://gitlab.com/Leftclickchris/arabot/
+[unreleased]: https://github.com/Animal-Rights-Advocates-Discord/arabot.ts
