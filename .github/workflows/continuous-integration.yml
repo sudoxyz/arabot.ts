@@ -19,7 +19,7 @@ jobs:
           node-version: '18.2.0'
           cache: npm
       - name: Install Packages
-        run: npm ci --prefer-offline
+        run: npm ci
       - name: Run ESLint
         run: npm run ciLint
 
