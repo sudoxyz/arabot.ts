@@ -40,10 +40,12 @@ export default class AboutCommand extends BotCommand {
             text: 'ARABot is programmed under the MIT License - Join our Developer team by using the ?apply command',
           })
           .setThumbnail(
-            'https://gitlab.com/Leftclickchris/arabot/-/raw/sapphire-typescript/assets/img/cow.png',
+            'https://camo.githubusercontent.com/262d5c2c3a0fe9f055680e79aa4a6239fe4564c1ebf2c249c249b92324dce721/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3839343639383237313537373130383533342f3933373631313038343037303831333732362f486e65742e636f6d2d696d6167652e706e67',
           )
           .setTitle('Animal Rights Advocates Discord Bot')
-          .setURL('https://gitlab.com/Leftclickchris/arabot')
+          .setURL(
+            'https://github.com/Animal-Rights-Advocates-Discord/arabot.ts',
+          )
           .addFields(
             [
               {
@@ -53,9 +55,7 @@ export default class AboutCommand extends BotCommand {
               {
                 name: 'Source',
                 value:
-                  '🦊 [Gitlab](https://discord.gg/animalrights)\n' +
-                  '🐙 [Github](https://discord.gg/animalrights)\n' +
-                  '🥺 Bot Is Currently Closed Source',
+                  '🐙 [Github](https://github.com/Animal-Rights-Advocates-Discord/arabot.ts)\n',
               },
               {
                 name: 'Socials',
@@ -71,12 +71,9 @@ export default class AboutCommand extends BotCommand {
               },
               {
                 name: 'Developers',
-                value: [
-                  '🖱️ <@134002739255574536> - Senior Developer',
-                  '💮 <@260991585230127105> - Developer',
-                  '❗ <@113703834051805184> - Developer',
-                  '💙 <@789937509383143455> - Developer',
-                ].join('\n'),
+                value: ['💙 <@789937509383143455> - Senior Developer'].join(
+                  '\n',
+                ),
               },
               {
                 name: 'Version',

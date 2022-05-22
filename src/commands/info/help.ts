@@ -62,12 +62,12 @@ export default class HelpCommand extends BotCommand {
                   .setDescription(command.description)
                   .setFooter({ text: 'To see all commands try 𝚑𝚎𝚕𝚙 alone' })
                   .setThumbnail(
-                    'https://user-content.gitlab-static.net/88e4c5408e0f864e98226e0bcf8a2dd22137cddf/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3839343639383237313537373130383533342f3933373631313038343037303831333732362f486e65742e636f6d2d696d6167652e706e67',
+                    'https://camo.githubusercontent.com/262d5c2c3a0fe9f055680e79aa4a6239fe4564c1ebf2c249c249b92324dce721/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3839343639383237313537373130383533342f3933373631313038343037303831333732362f486e65742e636f6d2d696d6167652e706e67',
                   )
                   .setTitle(command.name)
                   .setURL(
                     process.env.GIT_BRANCH ??
-                      'https://gitlab.com/Leftclickchris/arabot',
+                      'https://github.com/Animal-Rights-Advocates-Discord/arabot.ts',
                   )
                   .addFields(
                     [
@@ -137,17 +137,19 @@ export default class HelpCommand extends BotCommand {
                     name: this.container.client.user?.username ?? 'ARA Bot',
                     iconURL:
                       this.container.client.user?.displayAvatarURL() ?? '',
-                    url: 'https://gitlab.com/Leftclickchris/arabot',
+                    url: 'https://github.com/Animal-Rights-Advocates-Discord/arabot.ts',
                   })
                   .setColor('RANDOM')
                   .setFooter({
                     text: 'To see more details try 𝚑𝚎𝚕𝚙 [𝚌𝚘𝚖𝚖𝚊𝚗𝚍]',
                   })
                   .setThumbnail(
-                    'https://user-content.gitlab-static.net/88e4c5408e0f864e98226e0bcf8a2dd22137cddf/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3839343639383237313537373130383533342f3933373631313038343037303831333732362f486e65742e636f6d2d696d6167652e706e67',
+                    'https://camo.githubusercontent.com/262d5c2c3a0fe9f055680e79aa4a6239fe4564c1ebf2c249c249b92324dce721/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3839343639383237313537373130383533342f3933373631313038343037303831333732362f486e65742e636f6d2d696d6167652e706e67',
                   )
                   .setTitle('Read Detailed Documentation And Source Code Here')
-                  .setURL('https://gitlab.com/Leftclickchris/arabot')
+                  .setURL(
+                    'https://github.com/Animal-Rights-Advocates-Discord/arabot.ts',
+                  )
                   .addField(
                     'Server Prefix Options',
                     (await this.container.client.fetchPrefix(message))
