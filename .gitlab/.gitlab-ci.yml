@@ -1,4 +1,4 @@
-image: node:17.1.0-alpine3.14
+image: node:17.1.0-alpine3.14@sha256:993bdfb0da7ae8fa4dad7282f797e3e26e88f810d410e0b0409d132d1fb17af3
 
 variables:
   # When using dind, it's wise to use the overlayfs driver for
@@ -37,7 +37,7 @@ initialize-npm:
 
 eslint:
   stage: lint
-  image: node:14-alpine
+  image: node:14-alpine@sha256:c9b8829068199346e2a9ae46f870bbb82ce44de6580321300bf3945d00dee0f1
   script:
     - npx eslint . --ext ts --format gitlab --ignore-path .gitignore
   artifacts:
