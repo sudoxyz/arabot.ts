@@ -27,7 +27,7 @@ export default class AboutCommand extends BotCommand {
         new MessageEmbed()
           .setAuthor({
             name:
-              process.env.npm_package_name ??
+              process.env['npm_package_name'] ??
               this.container.client.user?.username ??
               'ARA',
             iconURL: this.container.client.user?.displayAvatarURL() ?? '',
@@ -78,8 +78,8 @@ export default class AboutCommand extends BotCommand {
               {
                 name: 'Version',
                 value: `${
-                  process.env.COMMIT ??
-                  process.env.npm_package_version ??
+                  process.env['COMMIT'] ??
+                  process.env['npm_package_version'] ??
                   'No Version Information Available'
                 }`,
               },

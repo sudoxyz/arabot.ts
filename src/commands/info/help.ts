@@ -66,7 +66,7 @@ export default class HelpCommand extends BotCommand {
                   )
                   .setTitle(command.name)
                   .setURL(
-                    process.env.GIT_BRANCH ??
+                    process.env['GIT_BRANCH'] ??
                       'https://github.com/Animal-Rights-Advocates-Discord/arabot.ts',
                   )
                   .addFields(

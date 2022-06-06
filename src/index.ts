@@ -11,7 +11,7 @@ import TOPICS from './lib/logger/topics.js';
 
 const BOT_PATH = `${path.dirname(fileURLToPath(import.meta.url))}/bot.js`;
 const manager = new ShardingManager(BOT_PATH, {
-  token: process.env.DISCORD_TOKEN ?? '',
+  token: process.env['DISCORD_TOKEN'] ?? '',
 });
 
 /**
@@ -19,7 +19,7 @@ const manager = new ShardingManager(BOT_PATH, {
  */
 const kill = (): never =>
   // eslint-disable-next-line unicorn/no-process-exit
-  process.exit(process.env.NODE_ENV === 'ci' ? 0 : 1);
+  process.exit(process.env['NODE_ENV'] === 'ci' ? 0 : 1);
 
 manager.on('shardCreate', (shard: DeepReadonly<Shard>) => {
   logger.debug(`Launched shard ${shard.id}`, {

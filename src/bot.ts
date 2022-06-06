@@ -9,7 +9,7 @@ import EVENTS from './lib/logger/events.js';
 import TOPICS from './lib/logger/topics.js';
 
 const client = new SapphireClient({
-  defaultPrefix: process.env.DEFAULT_PREFIX ?? null, // eslint-disable-line unicorn/no-null -- SapphirePrefix is string | string[] | null
+  defaultPrefix: process.env['DEFAULT_PREFIX'] ?? null, // eslint-disable-line unicorn/no-null -- SapphirePrefix is string | string[] | null
   intents: [
     'GUILDS',
     'GUILD_BANS',
@@ -26,7 +26,9 @@ const client = new SapphireClient({
   presence: {
     afk: false,
     status: 'online',
-    activities: [{ name: `${process.env.DEFAULT_PREFIX ?? '<@mention>'}help` }],
+    activities: [
+      { name: `${process.env['DEFAULT_PREFIX'] ?? '<@mention>'}help` },
+    ],
   },
   loadMessageCommandListeners: true,
   loadDefaultErrorListeners: false,
@@ -34,10 +36,10 @@ const client = new SapphireClient({
 });
 
 client
-  .login(process.env.DISCORD_TOKEN ?? '')
+  .login(process.env['DISCORD_TOKEN'] ?? '')
   .then(() =>
     client.logger.info(
-      `Logged In. Running in ${process.env.NODE_ENV ?? 'unknown'}`,
+      `Logged In. Running in ${process.env['NODE_ENV'] ?? 'unknown'}`,
       TOPICS.DISCORD,
       EVENTS.INIT,
     ),

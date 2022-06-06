@@ -14,7 +14,7 @@ export default class DiscordReadyCIDummyEvent extends Listener<
   }
 
   async run(): Promise<void> {
-    return process.env.NODE_ENV !== 'ci'
+    return process.env['NODE_ENV'] !== 'ci'
       ? Promise.resolve()
       : this.container.client.shard?.send('processKill');
   }

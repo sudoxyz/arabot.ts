@@ -40,7 +40,7 @@ const logger = createLogger({
           }`;
         }),
       ),
-      level: process.env.NODE_ENV === 'development' ? 'verbose' : 'debug',
+      level: process.env['NODE_ENV'] === 'development' ? 'verbose' : 'debug',
     }),
     new transports.DailyRotateFile({
       format: format.combine(
@@ -53,10 +53,10 @@ const logger = createLogger({
       filename: 'ARABot-%DATE%.log',
       maxFiles: '30d',
     }),
-    process.env.NO_DISCORD
+    process.env['NO_DISCORD']
       ? new NullTransport({})
       : new DiscordTransport({
-          webhookUrl: process.env.WEBHOOK ?? '',
+          webhookUrl: process.env['WEBHOOK'] ?? '',
           level: 'info',
         }),
     new transports.File({
@@ -67,7 +67,7 @@ const logger = createLogger({
       ),
       filename: 'debugging.log',
       dirname: './logs/',
-      level: process.env.NODE_ENV?.localeCompare('development')
+      level: process.env['NODE_ENV']?.localeCompare('development')
         ? 'silly'
         : 'help',
     }),

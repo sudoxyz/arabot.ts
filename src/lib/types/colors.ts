@@ -4,7 +4,7 @@ Animal Rights Advocates */
 /**
  * Color Codes Defined By Discord
  */
-export enum COLORS {
+enum Colors {
   DEFAULT = 0x00_00_00,
   WHITE = 0xff_ff_ff,
   AQUA = 0x1a_bc_9c,
@@ -36,4 +36,4 @@ export enum COLORS {
   NOT_QUITE_BLACK = 0x23_27_2a,
 }
 
-export default COLORS;
+export default Colors;

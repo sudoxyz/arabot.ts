@@ -4,7 +4,7 @@ Animal Rights Advocates */
 import os from 'node:os';
 import { MessageBuilder, Webhook } from 'webhook-discord';
 import Transport, { TransportStreamOptions } from 'winston-transport';
-import { COLORS } from '../types/colors.js';
+import Colors from '../types/colors.js';
 
 /**
  * Options for Discord transport for winston
@@ -33,16 +33,16 @@ type LoggerElements = Record<string, unknown> & {
 export default class DiscordTransport extends Transport {
   /** Available colors for discord messages */
   private static readonly colorCodes: { readonly [key: string]: number } = {
-    error: COLORS.DARK_RED,
-    warn: COLORS.RED,
-    help: COLORS.DARK_ORANGE,
-    data: COLORS.YELLOW,
-    info: COLORS.DARK_GREEN,
-    debug: COLORS.GREEN,
-    prompt: COLORS.DARK_BLUE,
-    verbose: COLORS.DARK_BLUE,
-    input: COLORS.DARK_PURPLE,
-    silly: COLORS.PURPLE,
+    error: Colors.DARK_RED,
+    warn: Colors.RED,
+    help: Colors.DARK_ORANGE,
+    data: Colors.YELLOW,
+    info: Colors.DARK_GREEN,
+    debug: Colors.GREEN,
+    prompt: Colors.DARK_BLUE,
+    verbose: Colors.DARK_BLUE,
+    input: Colors.DARK_PURPLE,
+    silly: Colors.PURPLE,
   };
 
   /** Webhook obtained from Discord */
@@ -77,7 +77,7 @@ export default class DiscordTransport extends Transport {
           .setDescription(info.message ?? '')
           .setColor(
             `#${(
-              DiscordTransport.colorCodes[info.level] ?? COLORS.DEFAULT
+              DiscordTransport.colorCodes[info.level] ?? Colors.DEFAULT
             ).toString(16)}`,
           )
           .addField('Host', os.hostname()),

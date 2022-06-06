@@ -1,6 +1,10 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "tsBuildInfoFile": "./build/.tsbuildinfo",
+    "allowJs": false,
+    "checkJs": false,
+    "removeComments": true,
     "target": "ESNEXT",
     "outDir": "../build"
   },
