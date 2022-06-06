@@ -83,7 +83,7 @@
     "eslint-plugin-write-good-comments": "^0.1.4",
     "globby": "^13.1.1",
     "jest": "^28.1.0",
-    "pm2": "^5.1.2",
+    "pm2": "^5.2.0",
     "ts-node": "^10.7.0",
     "typedoc": "^0.22.11",
     "typescript": "^4.7.3"
