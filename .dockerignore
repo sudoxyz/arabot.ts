@@ -1,0 +1,38 @@
+# SPDX-License-Identifier: MIT OR CC0-1.0
+# Bryn (ARA)
+
+# Environment variables
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+__tests__
+.github
+.gitlab
+.husky
+.vscode
+build
+coverage
+dist
+docs
+.editorconfig
+.env.example
+.eslintignore
+.eslintrc.yml
+.gitattributes
+.gitignore
+.gitlab-ci.yml.prettierrc.yml
+.prettierignore
+.prettierrc.yml
+changelog.md
+contributing.md
+docker-compose.yml
+Dockerfile
+ecosystem.config.yml
+jest.config.jest
+license.md
+README.md
+arabot.code-workspace
+arabot-ts.code-workspace

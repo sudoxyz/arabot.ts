@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT
+# Bryn (ARA)
+
+apps:
+  - script: dist/index.js
+    name: ARA
+    instances: 1
+    watch: false
+    autorestart: true
+    env:
+      NODE_ENV: production
