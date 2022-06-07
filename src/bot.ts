@@ -36,7 +36,7 @@ const client = new SapphireClient({
 });
 
 client
-  .login(process.env['DISCORD_TOKEN'] ?? '')
+  .login(process.env['DISCORD_TOKEN'])
   .then(() =>
     client.logger.info(
       `Logged In. Running in ${process.env['NODE_ENV'] ?? 'unknown'}`,
